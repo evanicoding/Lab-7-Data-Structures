@@ -1,11 +1,11 @@
 
 public class Matrix {
-    int[][] aMatrix;
+    double[][] aMatrix;
 
     private Matrix(){};
 
     public Matrix(int vertices){
-        aMatrix = new int[vertices][vertices];
+        aMatrix = new double[vertices][vertices];
     }
 
     public void addEdge(int src, int dst, double weight){
@@ -19,8 +19,8 @@ public class Matrix {
     }
 
     public void print() {
-        for (int[] row : aMatrix){
-            for(int val : row){
+        for (double[] row : aMatrix){
+            for(double val : row){
                 System.out.print(val + " ");
             }
             System.out.println();
