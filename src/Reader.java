@@ -24,6 +24,10 @@ public class Reader {
         verticesSize = vertices.size();
     }
 
+    public void addEdges(String filename) throws FileNotFoundException{
+
+    }
+
     public int getVertices(){
         return verticesSize;
     }

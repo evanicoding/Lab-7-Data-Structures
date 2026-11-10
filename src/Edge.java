@@ -1,11 +1,12 @@
 public class Edge {
-    Node dst;
-    int weight;
+    int dst;
+    double weight;
 
     private Edge(){};
 
-    public Edge(Node dst,int weight){
+    public Edge(int dst,double weight){
         this.dst = dst;
         this.weight = weight;
     }
+
 }

@@ -1,12 +1,10 @@
 
 public class Matrix {
-    int vertices;
     int[][] aMatrix;
 
     private Matrix(){};
 
     public Matrix(int vertices){
-        this.vertices = vertices;
         aMatrix = new int[vertices][vertices];
     }
 
@@ -16,10 +14,14 @@ public class Matrix {
 
     }
 
+    public double getEdge(int src,int dst){
+        return aMatrix[src][dst];
+    }
+
     public void print() {
-        for (int[] c : aMatrix){
-            for(int r : c){
-                System.out.print(r + " ");
+        for (int[] row : aMatrix){
+            for(int val : row){
+                System.out.print(val + " ");
             }
             System.out.println();
         }
