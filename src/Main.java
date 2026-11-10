@@ -28,6 +28,15 @@ public class Main {
 
         adjList.print();
 
+        Matrix matrix = new Matrix(4);
+
+        matrix.addEdge(0,1,1);
+        matrix.addEdge(1,2,2);
+        matrix.addEdge(2,3,3);
+        matrix.addEdge(3,0,4);
+
+        matrix.print();
+
     }
 
 }
