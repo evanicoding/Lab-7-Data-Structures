@@ -1,17 +1,15 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 
 public class Main {
     public static void main(String[] args){
-        /*try (BufferedReader br = new BufferedReader(new FileReader("data/graphdata.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading file.");
-        }*/
+        Reader fileReader = new Reader();
+
+        try {
+            fileReader.countVertices("data/graphdata.txt");
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }
 
         List adjList = new List();
 
@@ -25,10 +23,9 @@ public class Main {
         adjList.addEdge(2,3,3);
         adjList.addEdge(3,0,4);
 
-
         adjList.print();
 
-        Matrix matrix = new Matrix(4);
+        Matrix matrix = new Matrix(fileReader.getVertices());
 
         matrix.addEdge(0,1,1);
         matrix.addEdge(1,2,2);
