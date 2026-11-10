@@ -44,6 +44,7 @@ public class Reader {
                 matrix.addEdge(to,from,weight);
 
                 list.addEdge(from,to,weight);
+                list.addEdge(to,from,weight);
             }
         }
     }
