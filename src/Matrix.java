@@ -8,7 +8,7 @@ public class Matrix {
         aMatrix = new int[vertices][vertices];
     }
 
-    public void addEdge(int src, int dst, int weight){
+    public void addEdge(int src, int dst, double weight){
         aMatrix[src][dst] = weight;
         aMatrix[dst][src] = weight;
 

@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args){
@@ -11,15 +12,10 @@ public class Main {
             System.out.println("File not found");
         }
 
-
         Matrix matrix = new Matrix(fileReader.getVertices());
+        List list = new List(fileReader.getVertices());
 
-        matrix.addEdge(0,1,1);
-        matrix.addEdge(1,2,2);
-        matrix.addEdge(2,3,3);
-        matrix.addEdge(3,0,4);
 
-        matrix.print();
 
     }
 
