@@ -36,8 +36,8 @@ public class List {
         System.out.println("Breadth First Search order: ");
         while (!queue.isEmpty()){
             int curr = queue.remove();
+            System.out.print(vertices.get(curr));
             if (!explored[curr]){
-                System.out.print(vertices.get(curr));
                 explored[curr] = true;
                 for (Edge e : list.get(curr)){
                     int next = e.dst;
