@@ -26,8 +26,6 @@ public class Reader {
     }
 
     public void readEdges(String filename, ArrayList<String> vertices, List list,Matrix matrix) throws FileNotFoundException{
-        ArrayList<String> edges = new ArrayList<>();
-
         try (Scanner in = new Scanner(new File(filename))) {
             while (in.hasNextLine()) {
                 String line = in.nextLine().trim();

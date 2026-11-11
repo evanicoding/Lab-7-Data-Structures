@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class List {
     private ArrayList<ArrayList<Edge>> list;
@@ -23,4 +25,34 @@ public class List {
             System.out.println();
         }
     }
+
+    public void bfs(ArrayList<String> vertices){
+        boolean[] explored = new boolean[vertices.size()];
+        Queue<Integer> queue = new LinkedList<>();
+
+        int start = 0;
+        queue.add(start);
+
+        System.out.println("Breadth First Search order: ");
+        while (!queue.isEmpty()){
+            int curr = queue.remove();
+            if (!explored[curr]){
+                System.out.print(vertices.get(curr));
+                explored[curr] = true;
+                for (Edge e : list.get(curr)){
+                    int next = e.dst;
+                    if (!explored[next]) {
+                        queue.add(next);
+                    }
+
+                }
+
+            }
+            System.out.println();
+        }
+
+
+    }
+
 }
+

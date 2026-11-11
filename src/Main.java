@@ -25,6 +25,9 @@ public class Main {
             System.out.println("Adj List");
             list.print();
 
+            System.out.println();
+            list.bfs(vertices);
+
         }
         catch (FileNotFoundException e) {
             System.out.println("File not found");
